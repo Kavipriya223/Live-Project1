@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Real Estate Consultancy </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    /* navbar */
+    :root
+{
+  --color-primary: #d13835f1;
+  --color-white: #e9e9e9;
+  --color-black: #141d28;
+  --color-black-1: #212b38;
+}
+*
+{
+     margin:0px;
+     padding:0px;
+     box-sizing:border-box;
+}
+body
+{
+     font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.menu_bar img
+{
+     width:180px;
+     color: var(--color-white);
+}
+.menu_bar 
+{
+     position: fixed;
+     background-color: var(--color-black);
+     height:80px;
+     width:100%;
+     display:flex;
+     align-items:center;
+     justify-content: space-between; 
+     padding:0 2%;
+   
+}
+.menu_bar ul
+{
+     list-style: none;
+     display: flex;
+}
+.menu_bar ul li
+{
+     font-weight: 500;
+     /* padding: 10px 20px; */
+     position: relative;
+     margin-right:80px;
+}
+.menu_bar ul li a 
+{
+     color: var(--color-white);
+     text-decoration: none;
+     font-size:16px;
+     transition: all 0.3s;
+     margin-left: 10px;
+}
+.menu_bar ul li a:hover
+{
+     color: var(--color-primary); 
+}
+.dropdown_menu
+{
+     display: none;
+}
+.menu_bar ul li:hover .dropdown_menu
+{
+     display: block;
+     position: absolute;
+     left: 0;
+     margin-right:-160px;
+     top:100%;
+     background-color: var(--color-black);
+}
+.menu_bar ul li:hover .dropdown_menu ul
+{
+     display: block;
+     margin: 10px; 
+}
+.menu_bar ul li:hover .dropdown_menu ul li
+{
+    width:330px;   
+    padding: 7px;
+    justify-content: center;
+}
+.fas 
+{
+     float: right;
+     margin-left: 10px;
+     padding-top: 5px;
+}
+.dropdown_menu-1
+{
+     display: none;
+}
+.dropdown_menu ul li:hover .dropdown_menu-1
+{
+     display:block;
+     position: absolute; 
+     margin-top: -40px;
+     margin-left:140px;
+     width:330px;  
+     left: 270px; 
+     background-color: var(--color-black);
+}
+
+/* .btn
+{
+     background-color: var(--color-primary);
+     width:200px;
+} */
+::-webkit-scrollbar
+{
+     width:15px;
+}
+::-webkit-scrollbar-track
+{
+     background:var(--color-black)
+
+}
+::-webkit-scrollbar-thumb
+{
+     background: var(--color-primary);
+     border-radius: 8px;
+}
+.checkbutton
+{
+     font-size: 30px;
+     color:aliceblue;
+     float:right ;
+     line-height:80px;
+     margin-right:40px;
+     cursor:pointer;
+     display: none;
+}
+.myCheckBox
+{
+     display: none;
+}
+@media screen and (max-width:952px) {
+     .menu_bar img
+     {
+          font-size:30px;
+          padding-left:50px;
+     }
+     .menu_bar ul li a
+     {
+          font-size:16px;
+     }
+}
+@media screen and (max-width:858px)
+{
+     .checkbutton
+     {
+          display: block;
+     }
+
+     ul
+     {
+          position: fixed;
+          width:100%;
+          height:100vh;
+          background: var(--color-black-1);
+          top:80px;
+          left:-100px;
+          text-align:center;
+          transition:all .5s;
+     }
+     .menu_bar ul li
+     {
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+     }
+     .menu_bar ul li a
+     {
+          font-size:20px;
+          background: var(--color-white);
+     }
+     a:hover,a.active
+     {
+          background: var(--color-primary);
+     }
+     .myCheckBox:checked ~ ul
+     {
+          left:0;
+     };
+}
+
+
+
+     .d1{
+        height: 650px;
+       
+        background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url(img/estate3.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content:space-evenly;
+
+        /* linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), */
+  
+     }
+     .d2{
+        width: 530px;
+     }
+     .d2>h2{
+        color: white;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+     .d2>p{
+        color:whitesmoke;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          text-align: justify;
+          line-height: 1.4;
+          font-size:17px;
+     }
+
+     .image{
+        height: 280px;
+        width: 480px;
+        border-radius: 10px;
+        transition: 400ms;
+     }
+     .image:hover{
+         transform: scale(1.05);
+             
+     }
+    /* footer */
+        
+         #footer{
+  
+  background-color: #141d28;
+}
+#btn{
+ margin-top: 20px;
+ background-color: black;
+ color: white;
+ border-width: 2px;
+ border-color: white;
+ border-style: solid;
+}
+#btn:hover{
+ background-color: #d13835f1;
+}
+</style>
+<body>
+   <!-- navbar -->
+   <div class="menu_bar">
+    <input type="checkbox" class="myCheckBox" id="mycheck">
+    <label for="mycheck" class="checkbutton">
+        <i class="fas fa-bars"></i>
+    </label>
+    <img src="img/logo.webp" alt="">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Services <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown_menu">
+            <ul>
+                <li><a href="General.html">General Trading:Import & Export</a></li>
+                <li><a href="Gold.html">Gold & Precious Metals</a></li>
+                <li><a href="food.html">Food & Beverages</a></li>
+                <li><a href="petrol.html">Petrochemical & Lubricants</a></li>
+                <li><a href="Solar.html">Solar Technonology Services</a></li>                
+                <li><a href="information.html">IT Division</a></li>
+                <li><a href="Realestate.html">Realestate</a></li>
+                <li><a href="#">Financial Consultancy <i class="fas fa-angle-right"></i></a>
+                    <div class="dropdown_menu-1">
+                        <ul>
+                            <li><a href="bank.html">Bank Instruments,LC,SBLC,BG,etc.</a></li>
+                            <li><a href="loan.html">Loan & Project Finance</a></li>
+                            <li><a href="high.html">High Yield Investment Programs</a></li>
+                        </ul>
+                     </div>
+                    </li>
+                </ul>
+            </div></li>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+            <!-- <li>
+              <button class="btn"><i class="fa fa-mobile" aria-hidden="true"></i>+966 505924712</button>
+            </li> -->
+        </ul>
+    </div>
+
+
+
+
+  <!-- body -->
+    <div class="d1">
+        <div class="d2">
+        <h2>Real Estate Consultancy </h2><br><br>
+        <p>OLSORTZ is one of the leading real estate companies in K.S.A and we have been recognised for our expertise and professionalism in real estate sector.<br><br>Our mission is to provide a transparent & smooth property transaction through high-quality standards. We have a solid UAE & International client base. We are actively facilitating various commercial & residential property transactions exclusively in MENA region.</p>
+        </div>
+        <div class="d3"><img src="img/estate.jpg" class="image"></div>
+     </div>
+
+
+      <!-- Footer -->
+
+      <!-- Footer -->
+      <div class="container-fluid  text-white py-5" id="footer">
+        <div class="row">
+          <div class="col-3">
+            <img src="img/mouse.png" width="200px" height="80px" alt="">
+            
+          </div>
+          <div class="col-3">
+            <h5 class="fw-bolder">Address</h5>
+            <p class="fw-bold">Saudi Arabia</p>
+            <p>P.O.Box:4535 <br>
+              Postal Code: 6689-36344 <br>
+              Eastern Province <br>
+              Kingdom of Saudi Arabia. <br>
+              Telefax: +966 013 5974170</p>
+     
+            <p class="fw-bold">Bahrain </p>
+            <p>P.0.Box 5017 <br>
+              Exhibition Road, Manama, <br> Kingdom of Bahrain. <br>
+              Telefax: +973 17292877</p>
+     
+            <p class="fw-bold">India </p>
+            <p>60/478 2nd Floor, <br>
+              Kolathara Arcade, <br>
+              South Panampilli Nagar, <br>
+              Kochi,India 682036 <br>
+              Ph: +91 9447041889</p>  
+     
+            <p class="fw-bold">U.A.E</p>
+            <p>P.O.Box 242808 <br>
+              Al Abbas Building <br>
+              Office No.504/ Room 10 <br>
+              Bank Street , Burdubai
+              Dubai, UAE <br>
+              Tel: +971 55 159 1288</p>
+          </div> 
+          <div class="col-3">
+            <h5 class="fw-bold">Key Contacts</h5>
+            <p><span class="fw-bold">Habeeb Al Hafidh</span><br>
+              CEO & Managing Director <br>
+              +966 505924712 <br>
+              habeeb@olsortz.com
+              investmentaxis@hotmail.com</p>
+     
+            <p><span class="fw-bold">Biju Rajan</span> <br>
+              Executive Director <br>
+              +966 500064365 <br>
+              biju@olsortz.com</p>
+     
+              <p class="fw-bold">Email: helpdesk@olsortz.com</p>
+              <p class="fw-bold">Telefax: +966 013 5974170</p>
+          </div>
+          <div class="col-3">
+            <h5>Subscribe to Newsletter</h5>
+            <input class="form-control" type="text" placeholder="Enter Your E-mail"><button class="btn" id="btn">Subscribe</button>
+     
+            <div class="py-5">
+              <h5>Get in Touch</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      
+</body>
+</html>
